@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-theme="ink">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Not found · NoeticEcho</title>
+<meta name="description" content="This page does not exist on noeticecho.github.io.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0A0B09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E9E3D2" media="(prefers-color-scheme: light)">
+<script>
+/* Ink or Paper: the reader's last choice, else the system's preference. Runs before the first
+   paint so the page never flashes the wrong theme. */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("noeticecho.theme"); } catch (e) {}
+  if (t !== "ink" && t !== "paper") t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "paper" : "ink";
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/literata-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/tokens/colors.css">
+<link rel="stylesheet" href="/assets/css/tokens/typography.css">
+<link rel="stylesheet" href="/assets/css/tokens/spacing.css">
+<link rel="stylesheet" href="/assets/css/tokens/base.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+</head>
+<body>
+<a class="skip" href="#content">Skip to the content</a>
+
+<header class="top">
+  <a class="brand" href="/" aria-label="NoeticEcho open source, home">NoeticEcho <span>open source</span></a>
+  <nav aria-label="Site">
+    <a href="/#open">Projects</a>
+    <a href="/#principles">Principles</a>
+    <a href="https://github.com/NoeticEcho">GitHub</a>
+    <a href="https://noeticecho.space">noeticecho.space</a>
+  </nav>
+  <button class="mode" id="mode" type="button" hidden aria-live="polite">reading <b id="modeName">ink</b></button>
+</header>
+
+<main id="content">
+  <div class="wrap notfound">
+    <p class="label">404 · not found</p>
+    <span class="tick" aria-hidden="true"></span>
+    <h1>Nothing is here.</h1>
+    <p>The address does not match a page on this site. It may have moved, or it was never published.</p>
+    <div class="actions">
+      <a class="btn primary" href="/">NoeticEcho open source <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn" href="/control-room/">control-room docs</a>
+      <a class="btn" href="https://github.com/NoeticEcho">GitHub</a>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <ul>
+      <li><a href="https://noeticecho.space">noeticecho.space</a></li>
+      <li><a href="https://github.com/NoeticEcho">github.com/NoeticEcho</a></li>
+      <li><a href="/control-room/">control-room docs</a></li>
+    </ul>
+    <p>Set in Literata, IBM Plex Sans and JetBrains Mono, under the <a href="/assets/fonts/LICENSE.txt">SIL Open Font License</a>.</p>
+  </div>
+</footer>
+
+<script src="/assets/theme.js" defer></script>
+</body>
+</html>

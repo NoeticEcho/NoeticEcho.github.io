@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-theme="ink">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NoeticEcho · Open systems for meaning, cognition and human–AI collaboration</title>
+<meta name="description" content="NoeticEcho builds open systems for meaning, cognition and human–AI collaboration. Open now: control-room, for running many AI coding agents with one coordinator, and TypedbEx, an Elixir driver for TypeDB 3.x.">
+<link rel="canonical" href="https://noeticecho.github.io/">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0A0B09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E9E3D2" media="(prefers-color-scheme: light)">
+<script>
+/* Ink or Paper: the reader's last choice, else the system's preference. Runs before the first
+   paint so the page never flashes the wrong theme. */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("noeticecho.theme"); } catch (e) {}
+  if (t !== "ink" && t !== "paper") t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "paper" : "ink";
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/literata-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/tokens/colors.css">
+<link rel="stylesheet" href="/assets/css/tokens/typography.css">
+<link rel="stylesheet" href="/assets/css/tokens/spacing.css">
+<link rel="stylesheet" href="/assets/css/tokens/base.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NoeticEcho">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://noeticecho.github.io/">
+<meta property="og:title" content="NoeticEcho · Open source">
+<meta property="og:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room and TypedbEx are open now.">
+<meta property="og:image" content="https://noeticecho.github.io/social/org.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="NoeticEcho: open systems for meaning, cognition and human–AI collaboration.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NoeticEcho · Open source">
+<meta name="twitter:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room and TypedbEx are open now.">
+<meta name="twitter:image" content="https://noeticecho.github.io/social/org.png">
+<meta name="twitter:image:alt" content="NoeticEcho: open systems for meaning, cognition and human–AI collaboration.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://noeticecho.github.io/#org",
+      "name": "NoeticEcho",
+      "url": "https://noeticecho.space/",
+      "logo": "https://noeticecho.github.io/icon-512.png",
+      "description": "Open systems for meaning, cognition and human–AI collaboration.",
+      "sameAs": ["https://github.com/NoeticEcho", "https://noeticecho.github.io/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://noeticecho.github.io/#website",
+      "url": "https://noeticecho.github.io/",
+      "name": "NoeticEcho open source",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://noeticecho.github.io/#org" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://noeticecho.github.io/#control-room",
+      "name": "control-room",
+      "description": "One person, one AI coordinator, many AI coding agents: a protocol, prompts and scripts for running them in parallel, with one desk for the decisions only the person can make.",
+      "url": "https://noeticecho.github.io/control-room/",
+      "codeRepository": "https://github.com/NoeticEcho/control-room",
+      "programmingLanguage": ["Shell", "Python", "JavaScript"],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "image": "https://noeticecho.github.io/social/control-room.png",
+      "author": { "@id": "https://noeticecho.github.io/#org" },
+      "publisher": { "@id": "https://noeticecho.github.io/#org" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://noeticecho.github.io/#typedbex",
+      "name": "TypedbEx",
+      "description": "An Elixir driver for TypeDB 3.x, over the HTTP API and gRPC, published on Hex as typedb and typedb_grpc.",
+      "url": "https://hexdocs.pm/typedb",
+      "codeRepository": "https://github.com/NoeticEcho/TypedbEx",
+      "programmingLanguage": "Elixir",
+      "runtimePlatform": "Erlang/OTP",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "image": "https://noeticecho.github.io/social/typedbex.png",
+      "sameAs": ["https://hex.pm/packages/typedb", "https://hex.pm/packages/typedb_grpc"],
+      "author": { "@id": "https://noeticecho.github.io/#org" },
+      "publisher": { "@id": "https://noeticecho.github.io/#org" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the content</a>
+
+<header class="top">
+  <a class="brand" href="/" aria-label="NoeticEcho open source, home">NoeticEcho <span>open source</span></a>
+  <nav aria-label="Site">
+    <a href="#open">Projects</a>
+    <a href="#principles">Principles</a>
+    <a href="https://github.com/NoeticEcho">GitHub</a>
+    <a href="https://noeticecho.space">noeticecho.space</a>
+  </nav>
+  <button class="mode" id="mode" type="button" hidden aria-live="polite">reading <b id="modeName">ink</b></button>
+</header>
+
+<main id="content">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <p class="label">NoeticEcho · open source</p>
+      <span class="tick" aria-hidden="true"></span>
+      <h1 id="title">Open systems for meaning, cognition and <span class="nw">human–AI</span> collaboration.</h1>
+      <p class="lede">We build software in which meaning is a first-class object: a world you can walk whose atmosphere is computed from what it means, agents (<em>iskins</em>) with their own memory and voice, and a language (NSL) for describing both. Along the way we open-source the tools we could not find.</p>
+      <blockquote><p>Meaning should not disappear when software begins.</p></blockquote>
+    </section>
+
+    <section class="section" id="open" aria-labelledby="open-title">
+      <header>
+        <p class="label">Open now</p>
+        <h2 id="open-title">Two repositories you can use today</h2>
+        <p>Both are under the Apache-2.0 licence.</p>
+      </header>
+      <div class="plates">
+        <article class="plate" aria-labelledby="cr-title">
+          <div class="plate-head">
+            <h3 id="cr-title">control-room</h3>
+            <span class="state open">open</span>
+          </div>
+          <p>One person, one AI coordinator, many AI coding agents. A protocol, prompts and scripts for running them in parallel, each on its own branch, with one desk for the decisions only the person can make.</p>
+          <dl class="facts">
+            <div><dt>Roles</dt><dd>The owner decides. The coordinator plans, briefs and lands. Each worker carries one epic to a pull request.</dd></div>
+            <div><dt>Runners</dt><dd>Claude Code cloud sessions, Codex, e2b sandboxes or local git worktrees.</dd></div>
+            <div><dt>Checks</dt><dd><code>local-ci</code> runs them on your own machine and posts the verdict as a commit status. No Actions minutes.</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn primary" href="/control-room/">Read the docs <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://github.com/NoeticEcho/control-room">Repository</a>
+          </div>
+        </article>
+
+        <article class="plate" aria-labelledby="tx-title">
+          <div class="plate-head">
+            <h3 id="tx-title">TypedbEx</h3>
+            <span class="state open">open</span>
+          </div>
+          <p>An Elixir driver for TypeDB 3.x. Two packages decode into the same structs and fail with the same error, so changing the transport is a line in your data-access module.</p>
+          <dl class="facts">
+            <div><dt><code>typedb</code></dt><dd>The HTTP API. One dependency, debuggable with <code>curl</code>, faster for many small independent reads.</dd></div>
+            <div><dt><code>typedb_grpc</code></dt><dd>gRPC. Large reads streamed lazily on the BEAM, pipelined reads, database export and import.</dd></div>
+          </dl>
+          <code class="command dep">{:typedb, "~> 0.10"}</code>
+          <div class="actions">
+            <a class="btn" href="https://github.com/NoeticEcho/TypedbEx">Repository</a>
+            <a class="btn" href="https://hexdocs.pm/typedb">Docs</a>
+            <a class="btn" href="https://hex.pm/packages/typedb">Hex: typedb</a>
+            <a class="btn" href="https://hexdocs.pm/typedb_grpc">typedb_grpc docs</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="next" aria-labelledby="next-title">
+      <header>
+        <p class="label">Coming next</p>
+        <h2 id="next-title">Not public yet</h2>
+        <p>They will be listed above when they are open.</p>
+      </header>
+      <div class="plates">
+        <article class="plate" aria-labelledby="mem-title">
+          <div class="plate-head">
+            <h3 id="mem-title">Agent memory on TypeDB</h3>
+            <span class="state">coming</span>
+          </div>
+          <p>A small semantic memory substrate for Elixir agents on TypedbEx: kinds of memory as types, events as relations, provenance and supersession as facts about facts. A foundation, not a framework.</p>
+        </article>
+        <article class="plate" aria-labelledby="harness-title">
+          <div class="plate-head">
+            <h3 id="harness-title">The development harness</h3>
+            <span class="state">coming</span>
+          </div>
+          <p>The engine that plans, gates and records the work of AI agents in our repositories: routing, gate lanes, a run ledger that runs its own checks, and regression environments derived from git history. We are deciding how to ship it: an MCP server, a Claude Code plugin or a Hex package.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="echobaby" aria-labelledby="echobaby-title">
+      <header>
+        <p class="label">In development</p>
+        <h2 id="echobaby-title">EchoBaby</h2>
+      </header>
+      <div class="prose">
+        <p>A walkable world of meaning. It is built in Elixir: Ash, Phoenix and Jido, with TypeDB and Qdrant. A BabylonJS client renders it, with the Observer seen from behind in a hooded cloak. Its first public milestone is a site and a world that anonymous visitors can enter.</p>
+        <p>Follow it at <a href="https://noeticecho.space">noeticecho.space</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="principles" aria-labelledby="principles-title">
+      <header>
+        <p class="label">How we work</p>
+        <h2 id="principles-title">Six rules we hold ourselves to</h2>
+      </header>
+      <ol class="principles">
+        <li><p>Models propose, validators decide, runtimes execute.</p></li>
+        <li><p>Meaning is kept apart from geometry, UI and rendering.</p></li>
+        <li><p>Everything generated carries its provenance.</p></li>
+        <li><p>Projections are views, never the source of truth.</p></li>
+        <li><p>The system represents what people express. It does not claim to know their inner state.</p></li>
+        <li><p>A specification is not proof that an implementation exists.<span>We say which is which.</span></p></li>
+      </ol>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <ul>
+      <li><a href="https://noeticecho.space">noeticecho.space</a></li>
+      <li><a href="https://github.com/NoeticEcho">github.com/NoeticEcho</a></li>
+      <li><a href="/control-room/">control-room docs</a></li>
+    </ul>
+    <p>Technical questions go in the relevant repository's issues or Discussions. Collaboration goes through <a href="https://noeticecho.space">the website</a>. How to contribute: <a href="https://github.com/NoeticEcho/.github/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>. Set in Literata, IBM Plex Sans and JetBrains Mono, under the <a href="/assets/fonts/LICENSE.txt">SIL Open Font License</a>.</p>
+  </div>
+</footer>
+
+<script src="/assets/theme.js" defer></script>
+</body>
+</html>
