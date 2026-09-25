@@ -1,7 +1,7 @@
-# noeticecho.github.io
+# open.noeticecho.space
 
 The NoeticEcho organisation's page on GitHub Pages: what NoeticEcho is, its open-source
-projects, what is coming, and how it works. It is served at https://noeticecho.github.io/.
+projects, what is coming, and how it works. It is served at https://open.noeticecho.space/.
 
 It is hand-written HTML and CSS with no build step and no framework. `.nojekyll` tells
 GitHub Pages to publish the files as they are.

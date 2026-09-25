@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://noeticecho.github.io/sitemap.xml
-Sitemap: https://noeticecho.github.io/control-room/sitemap.xml
+Sitemap: https://open.noeticecho.space/sitemap.xml
+Sitemap: https://open.noeticecho.space/control-room/sitemap.xml

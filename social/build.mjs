@@ -102,14 +102,14 @@ const cards = {
     title: "NoeticEcho",
     lines: ["Open systems for meaning, cognition", "and human–AI collaboration."],
     data: ["control-room · TypedbEx"],
-    foot: "noeticecho.github.io",
+    foot: "open.noeticecho.space",
   }),
   "control-room": card({
     label: "NoeticEcho · open source",
     title: "control-room",
     lines: ["One person, one AI coordinator, many AI coding", "agents, and one desk for the owner's decisions."],
     data: ["protocol · prompts · scripts · Apache-2.0"],
-    foot: "noeticecho.github.io/control-room",
+    foot: "open.noeticecho.space/control-room",
   }),
   typedbex: card({
     label: "NoeticEcho · open source",
