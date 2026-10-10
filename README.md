@@ -15,7 +15,7 @@ GitHub Pages to publish the files as they are.
 | `assets/fonts/` | Literata, IBM Plex Sans and JetBrains Mono (WOFF2), with their licence in `LICENSE.txt` |
 | `assets/theme.js` | The Ink / Paper switch |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png`, `icon-512.png` | The mark, as icons |
-| `social/*.svg`, `social/*.png` | 1280×640 social previews for the organisation, control-room and TypedbEx |
+| `social/*.svg`, `social/*.png` | 1280×640 social previews for the organisation, control-room and TypedbEx (reminisce has none yet) |
 | `social/build.mjs` | Writes the icons and the social previews. See the comment at its top |
 | `robots.txt`, `sitemap.xml` | For crawlers. The robots file also names the control-room docs' sitemap |
 
