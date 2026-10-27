@@ -132,6 +132,7 @@ main { flex: 1; width: 100%; min-width: 0; }
 
 .plates { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
 @media (min-width: 900px) { .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); } }
+@media (min-width: 900px) { .plate.wide { grid-column: 1 / -1; } .plate.wide .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); } .plate.wide .facts > div { display: block; } }
 .plate {
   display: flex; flex-direction: column; gap: var(--space-4); min-width: 0;
   padding: var(--space-5) var(--space-4);

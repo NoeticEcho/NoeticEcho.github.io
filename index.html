@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NoeticEcho · Open systems for meaning, cognition and human–AI collaboration</title>
-<meta name="description" content="NoeticEcho builds open systems for meaning, cognition and human–AI collaboration. Open now: control-room, for running many AI coding agents with one coordinator; noetic-harness, a development harness that routes, gates and records their work; TypedbEx, an Elixir driver for TypeDB 3.x; and reminisce, agent memory on TypeDB.">
+<meta name="description" content="NoeticEcho builds open systems for meaning, cognition and human–AI collaboration. Open now: control-room, for running many AI coding agents with one coordinator; noetic-harness, a development harness that routes, gates and records their work; TypedbEx, an Elixir driver for TypeDB 3.x; reminisce, agent memory on TypeDB; and «Сквозь время», an open interactive textbook of the whole web.">
 <link rel="canonical" href="https://open.noeticecho.space/">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0A0B09" media="(prefers-color-scheme: dark)">
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://open.noeticecho.space/">
 <meta property="og:title" content="NoeticEcho · Open source">
-<meta property="og:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, noetic-harness, TypedbEx and reminisce are open now.">
+<meta property="og:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, noetic-harness, TypedbEx, reminisce and the «Сквозь время» textbook are open now.">
 <meta property="og:image" content="https://open.noeticecho.space/social/org.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1280">
@@ -45,7 +45,7 @@
 <meta property="og:image:alt" content="NoeticEcho: open systems for meaning, cognition and human–AI collaboration.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NoeticEcho · Open source">
-<meta name="twitter:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, noetic-harness, TypedbEx and reminisce are open now.">
+<meta name="twitter:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, noetic-harness, TypedbEx, reminisce and the «Сквозь время» textbook are open now.">
 <meta name="twitter:image" content="https://open.noeticecho.space/social/org.png">
 <meta name="twitter:image:alt" content="NoeticEcho: open systems for meaning, cognition and human–AI collaboration.">
 
@@ -115,6 +115,21 @@
       "publisher": { "@id": "https://open.noeticecho.space/#org" }
     },
     {
+      "@type": "Course",
+      "@id": "https://open.noeticecho.space/#learn",
+      "name": "Сквозь время",
+      "alternateName": "Through Time",
+      "description": "An open interactive textbook of the whole web industry, in Russian, for absolute beginners: from the first web page of 1991 to the agentic web, learned on the learner's own project. No registration; progress stays in the browser.",
+      "url": "https://open.noeticecho.space/learn/",
+      "inLanguage": "ru",
+      "isAccessibleForFree": true,
+      "educationalLevel": "Beginner",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sameAs": ["https://github.com/NoeticEcho/learn"],
+      "provider": { "@id": "https://open.noeticecho.space/#org" },
+      "publisher": { "@id": "https://open.noeticecho.space/#org" }
+    },
+    {
       "@type": "SoftwareSourceCode",
       "@id": "https://open.noeticecho.space/#reminisce",
       "name": "reminisce",
@@ -159,8 +174,8 @@
     <section class="section" id="open" aria-labelledby="open-title">
       <header>
         <p class="label">Open now</p>
-        <h2 id="open-title">Four repositories you can use today</h2>
-        <p>All four are under the Apache-2.0 licence.</p>
+        <h2 id="open-title">Five open projects you can use today</h2>
+        <p>The code of all five is under the Apache-2.0 licence; the textbook's lessons are under CC BY-SA 4.0.</p>
       </header>
       <div class="plates">
         <article class="plate" aria-labelledby="cr-title">
@@ -236,6 +251,22 @@
             <a class="btn" href="https://hexdocs.pm/reminisce">Docs</a>
             <a class="btn" href="https://hex.pm/packages/reminisce">Hex: reminisce</a>
             <a class="btn" href="https://hexdocs.pm/reminisce/spec.html">Design</a>
+          </div>
+        </article>
+        <article class="plate wide" aria-labelledby="learn-title">
+          <div class="plate-head">
+            <h3 id="learn-title" lang="ru">Сквозь время</h3>
+            <span class="state open">open</span>
+          </div>
+          <p>An interactive textbook of the whole web, in Russian, for people who have never built a site: from the first page of 1991 to the agentic web. You learn on your own project, and the site you describe at the start is rebuilt era by era. Perhaps the last textbook of the pre-AI era: for those who want to understand the magic, not only use it.</p>
+          <dl class="facts">
+            <div><dt>Course</dt><dd>Seventeen parts: how the internet works, HTML and CSS, design systems, JavaScript, servers, data, infrastructure, copywriting and marketing frameworks, storytelling, metrics, quality and law, and AI. Being written now, part by part.</dd></div>
+            <div><dt>Practice</dt><dd>A sandbox in the browser checks the page you build; spaced repetition keeps what you learned; a guide called Echo walks with you.</dd></div>
+            <div><dt>Private</dt><dd>No registration and no analytics. Progress stays in your browser and exports as a file.</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn primary" href="/learn/">Open the textbook <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://github.com/NoeticEcho/learn">Repository</a>
           </div>
         </article>
       </div>
