@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NoeticEcho · Open systems for meaning, cognition and human–AI collaboration</title>
-<meta name="description" content="NoeticEcho builds open systems for meaning, cognition and human–AI collaboration. Open now: control-room, for running many AI coding agents with one coordinator; TypedbEx, an Elixir driver for TypeDB 3.x; and reminisce, agent memory on TypeDB.">
+<meta name="description" content="NoeticEcho builds open systems for meaning, cognition and human–AI collaboration. Open now: control-room, for running many AI coding agents with one coordinator; noetic-harness, a development harness that routes, gates and records their work; TypedbEx, an Elixir driver for TypeDB 3.x; and reminisce, agent memory on TypeDB.">
 <link rel="canonical" href="https://open.noeticecho.space/">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0A0B09" media="(prefers-color-scheme: dark)">
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://open.noeticecho.space/">
 <meta property="og:title" content="NoeticEcho · Open source">
-<meta property="og:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, TypedbEx and reminisce are open now.">
+<meta property="og:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, noetic-harness, TypedbEx and reminisce are open now.">
 <meta property="og:image" content="https://open.noeticecho.space/social/org.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1280">
@@ -45,7 +45,7 @@
 <meta property="og:image:alt" content="NoeticEcho: open systems for meaning, cognition and human–AI collaboration.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NoeticEcho · Open source">
-<meta name="twitter:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, TypedbEx and reminisce are open now.">
+<meta name="twitter:description" content="Open systems for meaning, cognition and human–AI collaboration. control-room, noetic-harness, TypedbEx and reminisce are open now.">
 <meta name="twitter:image" content="https://open.noeticecho.space/social/org.png">
 <meta name="twitter:image:alt" content="NoeticEcho: open systems for meaning, cognition and human–AI collaboration.">
 
@@ -80,6 +80,22 @@
       "programmingLanguage": ["Shell", "Python", "JavaScript"],
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "image": "https://open.noeticecho.space/social/control-room.png",
+      "author": { "@id": "https://open.noeticecho.space/#org" },
+      "publisher": { "@id": "https://open.noeticecho.space/#org" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://open.noeticecho.space/#noetic-harness",
+      "name": "noetic-harness",
+      "description": "A development harness for AI coding agents: it routes each piece of work to a workflow and the smallest team of roles, plans and runs the gates a change must pass, keeps a run ledger that refuses a step reported done without evidence, and keeps a project memory. A single executable for Linux and macOS, and a Claude plugin.",
+      "url": "https://github.com/NoeticEcho/noetic-harness",
+      "codeRepository": "https://github.com/NoeticEcho/noetic-harness",
+      "downloadUrl": "https://github.com/NoeticEcho/noetic-harness/releases/latest",
+      "softwareVersion": "0.6.0",
+      "programmingLanguage": "Elixir",
+      "runtimePlatform": "Erlang/OTP",
+      "operatingSystem": ["Linux", "macOS"],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "author": { "@id": "https://open.noeticecho.space/#org" },
       "publisher": { "@id": "https://open.noeticecho.space/#org" }
     },
@@ -143,8 +159,8 @@
     <section class="section" id="open" aria-labelledby="open-title">
       <header>
         <p class="label">Open now</p>
-        <h2 id="open-title">Three repositories you can use today</h2>
-        <p>All three are under the Apache-2.0 licence.</p>
+        <h2 id="open-title">Four repositories you can use today</h2>
+        <p>All four are under the Apache-2.0 licence.</p>
       </header>
       <div class="plates">
         <article class="plate" aria-labelledby="cr-title">
@@ -164,6 +180,26 @@
           </div>
         </article>
 
+        <article class="plate" aria-labelledby="nh-title">
+          <div class="plate-head">
+            <h3 id="nh-title">noetic-harness</h3>
+            <span class="state open">open</span>
+          </div>
+          <p>A development harness for AI coding agents. A repository writes down how it is developed in an <code>.agents/</code> directory, and the harness holds the agents to it: each piece of work goes to a workflow and the smallest team of roles that covers it, and a step reported done without evidence is refused.</p>
+          <dl class="facts">
+            <div><dt>Engine</dt><dd>Routing, gate lanes, a run ledger that runs the gates itself, a project memory, and an evolution engine with holdouts against Goodhart. One executable for Linux and macOS.</dd></div>
+            <div><dt>Packs</dt><dd>A starter pack of thirty roles and generic workflows, and a full catalogue of more than two hundred roles.</dd></div>
+            <div><dt>Claude</dt><dd>In Claude Code, <code>noetic-harness sync</code> sets up the whole harness, MCP server and subagents. The Claude plugin carries the roles and the method where nothing can be installed.</dd></div>
+          </dl>
+          <code class="command dep">noetic-harness init &amp;&amp; noetic-harness sync</code>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/NoeticEcho/noetic-harness">Repository <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://github.com/NoeticEcho/noetic-harness/releases/latest">Release 0.6.0</a>
+            <a class="btn" href="https://github.com/NoeticEcho/noetic-harness#install">Install</a>
+            <a class="btn" href="https://github.com/NoeticEcho/noetic-harness/tree/main/priv/plugin">Claude plugin</a>
+          </div>
+        </article>
+
         <article class="plate" aria-labelledby="tx-title">
           <div class="plate-head">
             <h3 id="tx-title">TypedbEx</h3>
@@ -174,7 +210,7 @@
             <div><dt><code>typedb</code></dt><dd>The HTTP API. One dependency, debuggable with <code>curl</code>, faster for many small independent reads.</dd></div>
             <div><dt><code>typedb_grpc</code></dt><dd>gRPC. Large reads streamed lazily on the BEAM, pipelined reads, database export and import.</dd></div>
           </dl>
-          <code class="command dep">{:typedb, "~> 0.10"}</code>
+          <code class="command dep">{:typedb, "~> 0.11"}</code>
           <div class="actions">
             <a class="btn" href="https://github.com/NoeticEcho/TypedbEx">Repository</a>
             <a class="btn" href="https://hexdocs.pm/typedb">Docs</a>
@@ -194,30 +230,13 @@
             <div><dt>Recalls</dt><dd>Deterministically: the same store and query give the same order. <code>why/4</code> explains a memory: its sources, what it superseded, what contradicts it.</dd></div>
             <div><dt>Withdraws</dt><dd>A subject's words can be erased on request. The README lists what erasure does not reach.</dd></div>
           </dl>
-          <code class="command dep">{:reminisce, "~> 0.2"}</code>
+          <code class="command dep">{:reminisce, "~> 0.5"}</code>
           <div class="actions">
             <a class="btn primary" href="https://github.com/NoeticEcho/reminisce-elixir">Repository <span class="arrow" aria-hidden="true">→</span></a>
             <a class="btn" href="https://hexdocs.pm/reminisce">Docs</a>
             <a class="btn" href="https://hex.pm/packages/reminisce">Hex: reminisce</a>
             <a class="btn" href="https://hexdocs.pm/reminisce/spec.html">Design</a>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="next" aria-labelledby="next-title">
-      <header>
-        <p class="label">Coming next</p>
-        <h2 id="next-title">Not public yet</h2>
-        <p>It will be listed above when it is open.</p>
-      </header>
-      <div class="plates">
-        <article class="plate" aria-labelledby="harness-title">
-          <div class="plate-head">
-            <h3 id="harness-title">The development harness</h3>
-            <span class="state">coming</span>
-          </div>
-          <p>The engine that plans, gates and records the work of AI agents in our repositories: routing, gate lanes, a run ledger that runs its own checks, and regression environments derived from git history. We are deciding how to ship it: an MCP server, a Claude Code plugin or a Hex package.</p>
         </article>
       </div>
     </section>
